@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title>PCBUILD PART PICKER</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="PCBUILD_PARTPICKER.css">
+    <script src="PCBUILD.js"></script>
+    <script src="PCBUILD_SAVE.js"></script>
+</head>
+<body>
+	</br>
+    <h1 id="title">PCBUILD</h1>
+
+    <!--Admin login button and box-->
+<div id="login-container">
+    <button id="login-btn">Orders management</button>
+    <div id="login-modal" class="hidden">
+        <form id="login-form">
+            <h2>Admin Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="adminLogin()">Submit</button>
+            <button type="button" id="close-btn">Close</button>
+        </form>
+    </div>
+</div>
+    <table>
+        <form id = "table_form">
+        <tbody>
+            <!--row1-->
+            <tr><td></td></tr>  <tr><td></td></tr>
+          
+            <tr id="cpu"><!--row2-->
+                <td><h2>Choose a CPU company:</h2></td>
+                <td><label><img id="cpu_intel" src="images/cpuintel.png"></br>Intel<h5>600$</h5><input type="radio" id="cpu_intel" name="cpu" value="Intel" data-price="600"></label></td>
+                <td><label><img id="cpu_AMD" src="images/cpuAMD.png"></br>AMD<h5>700$</h5><input type="radio" id="cpu_AMD" name="cpu" value="Amd" data-price="700"></label></td></tr>
+            <tr id="gpu"><!--row3-->
+                <td><h2>Choose a GPU:</h2></td>
+                <td><label><img id="gpu_4080" src="images/4080.png"></br>4080<h5>1850$</h5></br><input type="radio" id="gpu_4080" name="gpu" value="RTX 4080" data-price="1850"></label></td>
+                <td><label><img id="gpu_4060ti" src="images/4060ti.png"></br>4060ti<h5>1250$</h5></br><input type="radio" id="gpu_4060ti" name="gpu" value="RTX 4060ti" data-price="1250"></label></td>
+                <td><label><img id="gpu_7800xt" src="images/7800xt.jpg"></br>7800xt<h5>1650$</h5></br><input type="radio" id="gpu_7800xt" name="gpu" value="7800xt" data-price="1650"></label></td>
+                <td><label><img id="gpu_7900xtx" src="images/7900xt.jpg"></br>7900xtx<h5>1800$</h5></br><input type="radio" id="gpu_7900xtx" name="gpu" value="7900xtx" data-price="1800"></label></td>
+            </tr>
+            <tr><!--row4-->
+                <td><h2>Choose a Motherboard Size:</h2></td>
+                <td><label><img id="mb_atx" src="images/ATX.png"></br>ATX<h5>400$</h5></br><input type="radio" id="mb_atx" name="motherboard" value="ATX" data-price="400"></label></td>
+                <td><label><img id="mb_microatx" src="images/MicroATX.png"></br>MicroATX<h5>300$</h5></br><input type="radio" id="mb_microatx" name="motherboard" value="Micro ATX" data-price="300"></label></td>
+                <td><label><img id="mb_miniaxt" src="images/MiniATX.png"></br>MiniATX<h5>250$</h5></br><input type="radio" id="mb_miniaxt" name="motherboard" value="Mini ATX" data-price="250"></label></td>
+            </tr>
+            <tr><td></td></tr><!--row5-->
+            <tr>
+                <td><h2>Choose the amount of RAM:</h2></td>
+                <td><select id="ram_list" name="ram_list">
+                    <option value="8 GB" data-price="100">8 GB - 100$</option>
+                    <option value="16 GB" data-price="150">16 GB - 150$</option>
+                    <option value="32 GB" data-price="200">32 GB - 200$</option>
+                    <option value="64 GB" data-price="300">64 GB - 300$</option></td>
+                <td><h2>Choose the amount of storage:</h2></td>
+                <td><!--row6-->
+                    <select id="storage_size_list" name="storage_size_list">
+                    <option value="512 GB" data-price="50">512 GB - 50$</option>
+                    <option value="1 TB" data-price="70">1 TB - 70$</option>
+                    <option value="2 TB" data-price="100">2 TB - 100$</option>
+                    <option value="3 TB" data-price="130">3 TB - 130$</option>
+				</td>
+            </tr>
+            <tr><!--row7-->
+                <td><h2>Choose accessories:</h2></td>
+                <td><label>
+					<img id="mb_atx" src="images/monitor.png">
+					<input type="checkbox" name="accessories_list" value="monitor" data-price="300"> Monitor
+					<h5>300$</h5>
+				</label></td>
+                <td><label><!--row8-->
+					<img id="mb_atx" src="images/mouse.png">
+					<input type="checkbox" name="accessories_list" value="mouse" data-price="40"> Mouse
+					<h5>40$</h5>
+				</label></td>
+                <td><label><!--row9-->
+					<img id="mb_atx" src="images/headphones.png">
+					<input type="checkbox" name="accessories_list" value="headphones" data-price="100"> Headphones
+					<h5>100$</h5>
+				</label></td>
+            </tr>
+            <tr><!--row10-->
+                <td><h2>Choose the case color:</h2></td>
+                <td><label><img id="black" src="images/caseBlack.png"></br><input type="radio" id="black" name="case" value="Black"></label></td>
+                <td><label><img id="blue" src="images/caseBlue.png"></br><input type="radio" id="blue" name="case" value="Blue"></label></td>
+                <td><label><img id="green" src="images/caseGreen.png"></br><input type="radio" id="green" name="case" value="Green"></label></td>
+                <td><label><img id="red" src="images/caseRed.png"></br><input type="radio" id="red" name="case" value="Red"></label></td>
+            </tr>
+            <tr><td></td></tr><!--row11-->
+            <tr><!--row12-->
+                <td><h2>Personal details:</h2></td>
+                <td>ID:<input type="text" id="id" name="id"></td>
+                <td>First Name:<input type="text" id="first_name" name="first_name"></td>
+                <td>Last Name:<input type="text" id="last_name" name="last_name"></td>
+                <td>Phone Number:<input type="text" id="phone_number" name="phone_number"></td>
+                <td>Email:<input type="text" id="email" name="email"></td>
+            </tr>
+            <tr><td></td></tr><!--row13-->
+        </tbody>
+    </form>
+    </table>
+    <div id="order_table_container">
+        <table id="order_table"><!--table for the lower of the page-->
+            <tr>
+                <td><label for="notes"><h3>Notes:</h3></label></td>
+                <td><textarea id="notes" name="notes" rows="4" cols="30"></textarea></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="order_button" type="button" value="send" onclick="generateText()">Order</button>
+                <button id="clear_button" type="Clear" onclick="clearForm()">Clear</button></td>
+ 
+            </tr>
+        </table>
+    </div>
+    <div id="orders_table_container">
+        <label id= label_table><h3>Enter your ID to view all matching orders:</h3></label>
+        <textarea id="personal_order" name="order" rows="1" cols="30"></textarea><br>
+        <button id="id_order_button" type="button" onclick="viewOrderTable()">View Orders</button>
+    </div>
+   
+
+    <div id="res"></div><!--div for the order summery-->
+    
+    </form>
+</body>
+</html>

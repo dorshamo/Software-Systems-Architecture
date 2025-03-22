@@ -1,0 +1,66 @@
+body {/*Define design for the body of order managment page*/
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.table-container {/*Table box design and positioning settings*/
+    overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+    max-width: 90%; /* Reduces the table's container width */
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.9); /* Adds a slightly opaque background */
+    border-radius: 10px;
+    padding: 5px; /* Adds padding to the container */
+    
+}
+
+table {/* Table design */
+    width: 100%; /* Table will stretch to fill container */
+    border-collapse: collapse;
+    font-size: 0.8rem; /* Reduces font size for a smaller table */
+}
+
+table, th, td {
+    border: 1px solid black; /* Slightly thinner border for a compact look */
+}
+
+th, td {
+    padding: 5px; /* Reduces padding inside cells */
+    text-align: left;
+    word-wrap: break-word; /* Ensures text wraps inside cells */
+}
+
+tr:not(.no-hover):hover {/* Format a row in a table when the mouse is over it */
+    background-color: #9999997c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+tr.no-hover {/*Format a row in a table when the mouse is not over it*/
+    background-color: black;
+    color: white;
+}
+
+button, #clear-all-button {/* Button Styling */
+    background-color: white;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+button:hover, #clear-all-button:hover {/* Button Styling when mouse over it */
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+#logo{/* logo Styling */
+    height :300;
+    width :300;
+}

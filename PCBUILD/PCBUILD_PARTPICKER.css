@@ -1,0 +1,180 @@
+body {/*Define design for the body of order managment page*/
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  background-image: url('images/background.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-position-x: center;
+}
+table {/*Define formatting for the table on the website */
+    border-collapse: collapse;
+    width: 40%;
+    margin-bottom: 20;
+    margin-left: 100;
+}
+td{/*Define formatting for the text in the table */
+    padding: 20px;
+    text-align: center;
+}
+
+img{/*Define design for images on the site */
+    width: 125px;
+    height: 125px;
+}
+form {/*Define design for the form */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+label{/*Define design for the labels */
+    font-size: 20px;
+}
+form label {/*Define formatting for text in the form */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input, form textarea, form button {/*Define formatting for a text box and button on the form */
+    padding: 8px;
+    font-size: 1.5rem;
+}
+form textarea {/*Define formatting for a text box in a form */
+    resize: vertical;
+    margin-bottom: 50;
+}
+#res {/*Setting the formatting of the text that appears at the bottom of the page*/
+    font-size: 20px;
+    text-align: center; 
+    margin-top: 10px; 
+    position: relative;
+}
+h1{/*Define the formatting of an h1 heading*/
+    text-align: center;
+}
+#title{
+    font-size: 60px;
+}
+h5 {/*Define design for price text */
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+label:hover h5 {/*Setting the formatting of the hover text*/
+    color: rgb(255, 145, 0); 
+    cursor: pointer; 
+}
+
+label:hover {/*Setting the formatting of the hover text*/
+    cursor: pointer;
+}
+
+h3{/*Define the formatting of an h3 heading*/
+    text-align: center;
+  }
+
+form button, #order_button, #clear_button, #id_order_button {/*Setting the design of the buttons on the page*/
+    background-color: white; 
+    border-radius: 20px; 
+    font-size: 1.0rem; 
+    padding: 15px 30px; 
+    border: 1.5px solid black; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+form button:hover, #order_button:hover , #clear_button:hover, #id_order_button:hover{/*Setting the design of buttons on a page when the mouse hovers over them*/
+    background-color: lightgray; 
+    transform: scale(1.1); 
+}
+
+#login-container {/* Login button box(div) position */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#login-modal {/* login box(div) styling */
+    position: absolute;
+    top: 200px;
+    right: -160px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+#login-modal.hidden {/*The login box status is hidden.*/
+    display: none;
+}
+
+#login-form input {/*Designing the text boxes in the login form*/
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+#login-form button {/*Designing the buttons in the login form*/
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+#login-btn {/*Design of an order management button*/
+    background-color: white; 
+    border-radius: 10px; 
+    font-size: 0.7rem; 
+    padding: 10px 10px; 
+    border: 1px solid black; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+#login-btn:hover {/*Design of an order management button when the mouse is over it*/
+    background-color: lightgray; 
+    transform: scale(1.05); 
+}
+
+#order_table_container {/*Design of the order table box(div) (the table in the bottom of the page)*/
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#order_table {/*Table design (the table in the bottom of the page)*/
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: auto;
+    text-align: left;
+}
+
+#order_table td {/*formatting the columns in a table(the table in the bottom of the page)*/
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#orders_table_container {/*Design of the orders_table_container*/
+    text-align: left;
+    margin: 0 auto; 
+    max-width: 90%; 
+    width: 90%; 
+}
+
+#label_table {/*Design of the label_table*/
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#personal_order {/*Design of the personal_order*/
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#id_order_button {/*Design of the id_order_button*/
+    margin-top: 10px;
+    display: block;
+}

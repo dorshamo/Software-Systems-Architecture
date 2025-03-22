@@ -1,0 +1,50 @@
+head {/*Setting the design for the top of the page*/
+    background-color: white;
+    width: 100%;
+}
+body {/*Define design for the body of the page*/
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-color: #ececec;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:xx-large;
+    margin:  50;
+}
+body button, #enter {/*Setting the design of the buttons on the page*/
+    background-color: white; 
+    border-radius: 20px; 
+    font-size: 1.0rem;
+    padding: 15px 30px; 
+    border: 1.5px solid black; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+body button:hover, #enter:hover {/*Setting the design of buttons on a page when the mouse hovers over them*/
+    background-color: lightgray; 
+    transform: scale(1.1); 
+}
+footer {/*Setting the design for the bottom of the page*/
+    background-color: black;
+    color: white;
+}
+footer h1 {/*Define formatting for h1 text at the bottom of the page*/
+    font-family:'Courier New', Courier, monospace;
+    font-size: xxx-large;
+}
+#case{/*Define case image size*/
+    height :550;
+    width :550;
+}
+#logo{/*Define logo image size*/
+    height :300;
+    width :300;
+}
+#robot{/*Define robot image size*/
+    height :18;
+    width :18;
+}
+iframe{/*Define iframe size*/
+    height :157;
+    width :260;
+}
